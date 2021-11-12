@@ -1,0 +1,51 @@
+.containerImagen {
+    background-image: url(../../assets/imagenRegistro.png);
+    background-size: cover;
+}
+.containerBienvenida {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10.3125rem;
+    width: 635px;
+    &>* {
+        font-family: 'Raleway', sans-serif;
+    }
+    & h2 {
+        font-weight: 700;
+        color: rgba(25, 108, 132, 1);
+        font-size: 3.75rem;
+        padding-top: 3.75rem;
+    }
+    & h3 {
+        font-weight: 500;
+        font-size: 1.875rem;
+        color: rgba(25, 108, 132, 1);
+        padding-bottom: 1.9375rem;
+    }
+    & p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 31px;
+        text-align: center;
+    }
+}
+.registrarRetoBlanco {
+    padding: 1.3125rem 2.285rem;
+    border-radius: 80px;
+    border: 2px solid #196C84;
+    font-weight: 700;
+    color: #196C84;
+    background-color: white;
+    margin-bottom: 5.5625rem;
+}
+.registrarRetoAzul {
+    margin-bottom: 1.8125rem;
+    padding: 1.3125rem 3.685rem;
+    border-radius: 80px;
+    border:none;
+    font-weight: 700;
+    color: white;
+    background-color: #196C84;
+}

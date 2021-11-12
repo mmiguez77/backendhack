@@ -1,0 +1,481 @@
+.banner {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3.75rem;
+    margin-bottom: 0;
+    border-radius: 3.125rem;
+    background-color: rgba(193, 216, 84, 1);
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+    width: 75%;
+    height: 29.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    & .ciudadanosTexto {
+        width: 90%;
+        font-family: 'Raleway', sans-serif;
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-align: left;
+        color: #0C3944;
+    }
+}
+
+.containerComoAyudar {
+    display: flex;
+
+    & h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 40px;
+        text-align: left;
+        color: rgba(25, 108, 132, 1);
+        margin-right: 3.75rem;
+    }
+
+    & h2 span {
+        font-size: 3rem;
+        margin-left: 1rem;
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: left;
+        color: rgba(25, 108, 132, 1);
+        width: 30rem;
+    }
+}
+
+.contenedorCategorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .categoryList {
+        display: flex;
+        width: 70%;
+        justify-content: center;
+
+        & li {
+            padding: 3.625rem 2rem;
+            text-align: center;
+            border-radius: 0 0 150px 150px;
+            margin-right: 2rem;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 22px;
+            text-align: center;
+            color: rgba(12, 57, 68, 1);
+            cursor: pointer;
+            box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+            transition: 1s all;
+            height: 10.191875rem;
+            width: 12rem;
+        }
+
+        & a {
+            transition: 1s all;
+            color: rgba(12, 57, 68, 1);
+            text-decoration: none;
+        }
+
+        & li:hover {
+            width: 13rem;
+            height: 11.5rem;
+
+            & a {
+                font-size: 1.3rem;
+                color: rgba(12, 57, 68, 1);
+                text-decoration: none;
+            }
+        }
+
+        & .blanco {
+            background-color: rgba(243, 243, 243, 1);
+        }
+
+        & .turquesa {
+            background-color: rgba(99, 198, 198, 1);
+        }
+
+        & .amarillo {
+            background-color: rgba(252, 246, 160, 1);
+        }
+
+        & .rosa {
+            background-color: #E36164;
+        }
+
+        & .verde {
+            background-color: rgba(193, 233, 78, 1);
+        }
+    }
+}
+
+.cardCategoria {
+    display: flex;
+    height: 20.437499rem;
+    width: 49.020838rem;
+    /* rojito claro */
+    background: #E36164;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    max-width: 90%;
+    margin-top: 6.125rem;
+    /* Sombra CARD ÓVALO */
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10rem;
+
+    &>* {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    & img {
+        width: 256px;
+        margin: 2.25rem;
+    }
+
+    & article {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    & h3 {
+        font-weight: 700;
+        font-size: 2.25rem;
+        margin-left: 7.3125rem;
+        margin-bottom: 1.3125rem;
+    }
+
+    & p {
+        font-weight: 700;
+        font-size: 1.125rem;
+        margin-left: 7.3125rem;
+        width: 70%;
+    }
+}
+
+.cardCategoriaReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 20.437499rem;
+    width: 49.020838rem;
+    /* rojito claro */
+    background: #E36164;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    max-width: 90%;
+    margin-top: 6.125rem;
+    /* Sombra CARD ÓVALO */
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10rem;
+
+    &>* {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    & img {
+        width: 256px;
+        margin: 2.25rem;
+    }
+
+    & article {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    & h3 {
+        font-weight: 700;
+        font-size: 2.25rem;
+        margin-left: 7.3125rem;
+        margin-bottom: 1.3125rem;
+    }
+
+    & p {
+        font-weight: 700;
+        font-size: 1.125rem;
+        margin-left: 7.3125rem;
+        width: 70%;
+    }
+}
+
+.contenedorCarousel {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.8125rem;
+    margin-bottom: 2rem;
+}
+
+.btnCards {
+    padding: 10px 20px;
+    transform: translate(700%);
+    border-radius: 80px;
+    border: 2px solid rgba(25, 108, 132, 1);
+    background-color: transparent;
+    font-weight: 700;
+    color: rgba(25, 108, 132, 1);
+    font-size: .875rem;
+}
+
+.owl-next span {
+    font-size: 3.125rem;
+}
+
+.contenedorComoAyudar {
+    display: flex;
+    margin-top: 8rem;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        height: 23.375rem;
+        width: 33.5rem;
+    }
+
+    & h3 {
+        width: 350px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        text-align: left;
+        color: rgba(12, 57, 68, 1);
+    }
+
+    & h3 span {
+        margin-left: 1.5rem;
+        font-size: 4rem;
+    }
+
+    & p {
+        width: 27.3125rem;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.875rem;
+        text-align: left;
+        color: rgba(12, 57, 68, 1);
+        margin-top: 2.3125rem;
+    }
+}
+
+.wrapper {
+    width: 80%;
+    display: flex;  
+    & h2 {
+            padding: 0;
+    margin: 0;
+    color: #0C3944;
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+    & .icon {
+        border-radius: 100px;
+        width: 30px;
+        height: 15px;
+        background-color: 0C3944;
+        border: none
+    }
+    span:before {
+        content: '';
+        animation: animate infinite 12s;
+    }
+}
+
+@keyframes animate {
+    0% {
+        content: '_ciudadanxs';
+    }
+
+    20% {
+        content: '_estudiantes';
+    }
+
+    30% {
+        content: '_ciudadanxs';
+    }
+
+    40% {
+        content: '_familia';
+    }
+
+    50% {
+        content: '_vecinxs';
+    }
+
+    60% {
+        content: '_niñxs';
+    }
+
+    70% {
+        content: '_jóvenes';
+    }
+
+    80% {
+        content: '_adultxs';
+    }
+
+    90% {
+        content: '_amigxs';
+    }
+    100% {
+        content: '_ciudadanxs';
+    }
+}
+
+.contDesafio {
+    width: 90%;
+    margin-left: auto;
+    z-index: 1;
+    margin-right: auto;
+    margin-top: 5.125rem;
+    height: 35.4375rem;
+    background-color: rgba(227, 97, 100, 1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+
+    border-radius:150px 150px 0 0 ;
+    img {
+        position: absolute;
+        width: 10.8125rem;
+        top: 30%;
+        left: 25%;
+    }
+    & >* {
+        color: rgba(12, 57, 68, 1);
+    }
+    & h2 {
+        font-family: Raleway;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+    & p{
+        padding-bottom: 15px;
+        text-align: left;
+    }
+}
+.contReto {
+    background-color: white;
+    position: relative;
+    border-radius: 100px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    width: 27.8125rem;
+    & h4 {
+        padding: 2rem 0 1rem 3.5rem;
+        font-weight: 700;
+    }
+    & p {
+        font-family: Raleway;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 3rem;
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+    & img {
+        height: 310px;
+        width: 310px;
+        top: -60%;
+        left: 110%;
+    }
+    }
+
+.textreto {
+    width: 350px;
+    padding-top: 1.7rem;
+}
+.title2 {
+    font-size: 30px;
+}
+
+.contForm {
+    & > * {
+        color: rgba(12, 57, 68, 1);
+    }
+    & h2 {
+        margin: 1.5rem;
+        margin-left: 0;
+    }
+    & p {
+        font-family: Raleway;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        width: 80%;
+    }
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3.75rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    height: 45rem;
+    border-radius: 50px;
+    /* BLACNO */
+    background: #FFFFFF;
+    border: 4px solid #E36164;
+    box-sizing: border-box;
+    /* Sombra CARD ÓVALO */
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+    margin-top: -40px;
+    & img {
+        width: 25.4375rem;
+    }
+    & label {
+        margin-top: 1rem;
+    }
+}
+.formBorder {
+    width: 60%;
+}
+.inputForm {
+    border: 2px solid #196C84;
+    box-sizing: border-box;
+    height: 63px;
+    padding-left: .625rem;
+    border-radius: 12px;
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.info {
+    color: #196C84;
+    font-size: 20px;
+}
+.contForm {
+    display: flex;
+}
+.btnContinuar {
+    padding: 1rem 5rem 1rem 5rem;
+    border-radius: 80px;
+    border: 2px solid rgba(25, 108, 132, 1);
+    background-color: transparent;
+    font-weight: 700;
+    color: rgba(25, 108, 132, 1);
+    font-size: .875rem;
+    width: 255px;
+    margin-left: 110%;
+    margin-top: 3rem;
+    cursor: pointer;
+    
+}

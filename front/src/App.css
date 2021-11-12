@@ -1,0 +1,325 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: rgba(12, 57, 68, 1);
+  display: flex;
+  justify-content: space-around;
+}
+.logo {
+  width: 21.375rem;
+}
+.navMenu {
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+.nav-item {
+  padding: 2.5rem;
+}
+.nav-item:first-child {
+  padding-left: 6.914375rem;
+}
+.nav-item:last-child {
+  background-color: white;
+  padding: .9375rem .5625rem;
+  margin-top: 1.5rem;
+  height: fit-content;
+  border-radius: 6px;
+}
+.nav-links {
+  color: white;
+}
+.btn-sesion {
+  color: black;
+  padding: .9375rem .5625rem;
+}
+.nav-links:hover {
+  color: white;
+  text-decoration: none;
+}
+.btn-sesion:hover {
+  color: black;
+}
+.nav-links:hover {
+  color: rgba(255, 243, 13, 1);
+}
+
+/* HOME HERO */
+.slide {
+  margin: 5.1875rem 10.9375rem;
+  margin-bottom: 0;
+  border-radius: 3.125rem;
+  background-color: rgba(227, 97, 100, 1);
+}
+.carousel-item.active {
+  height: 30rem;
+}
+.carousel-texto {
+  width: 562px;
+  text-align: center;
+}
+.contenedor-texto-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+}
+.contenedor-holdUp {
+  display: flex;
+  justify-content: space-evenly;
+}
+.carousel .carousel-indicators li {
+  background-color: #70AF90;
+  height: 1.25rem;
+  border-radius: 40%;
+}
+
+.imagen-home {
+  width: 42.752506rem;
+  max-width: 95%;
+  height: auto;
+  margin-right: 10.8125rem;
+}
+.contenedor-holdUp >* {
+  font-family: 'Raleway', sans-serif;
+  color: rgba(12, 57, 68, 1);
+}
+.texto-holdUp {
+  margin-top: 9.375rem;
+  font-size: 4rem;
+}
+.p10 {
+  margin-left: 2.625rem;
+}
+.m165 {
+  margin-left: 10.3125rem;
+}
+.texto-parrafo-plataforma {
+  margin-top: 3.75rem ;
+}
+.imagen-home {
+  margin-top: 10.25rem;
+}
+/* CARDS */
+
+.container-comoParticipar>* {
+  margin-top: 3.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: rgba(12, 57, 68, 1);
+}
+.container-comoParticipar h2{
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 10.3125rem;
+}
+.container-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 11.125rem;
+}
+.card-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7rem;
+}
+.title-card {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+.text-card {
+  text-align: center;
+  padding:  2.875rem ;
+  background-color: rgba(243, 243, 243, 1);
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 5rem;
+  width: 530px;
+  font-weight: 600;
+  overflow:auto;
+  font-size: 1rem;
+}
+.btn-quieroParticipar {
+  padding: 1.25rem 2.25rem;
+  border-radius: 80px;
+  border:none;
+  font-weight: 700;
+  color: white;
+  margin-top: -10rem;
+}
+.green {
+  background-color: #70AF90;
+}
+.blue {
+  background-color: #196C84;
+}
+
+/* footer */
+footer {
+  background-color: #0C3944;
+
+}
+.footer-components {
+  display: flex;
+  justify-content: center;
+}
+.footer-img {
+  height: 7.1875rem;
+  margin-left: 20rem - 7.8125rem;
+  margin-right: 7.8125rem;
+  margin-top: 1.6rem;
+}
+.footer-element {
+  color: white;
+  margin: 3.125rem 5.5625rem;
+  margin-bottom: 0;
+}
+.footer-element:first-child {
+  margin-left:  10.3125rem
+}
+.title-footer {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 45px;
+}
+.texto-footer {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  width: 80%;
+}
+.line {
+  background-color: white;
+  height: 2px;
+  opacity: 0.5;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1.25rem;
+}
+.rrss {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 14.25rem;
+  margin-top: 1.71625rem;
+  padding-bottom: 1.86375rem;
+}
+.rrss>*{
+  color: white;
+  padding-right: 1.834375rem;
+  font-size: 1.50rem;
+}
+
+/* LOGIN */
+.body-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.body-login > * {
+  font-family: 'Raleway', sans-serif;
+}
+.body-login input {
+    width: 22.8125rem;
+}
+.card-login {
+  margin: 2rem;
+  width: 530px;
+  border: 4px solid rgba(25, 108, 132, 1);
+  box-sizing: border-box;
+  /* Sombra CARD ÓVALO */
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 80px;  
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.sub_title {
+  font-weight: 60px;
+  text-align: center;
+  margin-bottom: 7%;
+}
+
+.label {
+  display: block;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 16%;
+  margin-bottom: 1%;
+}
+.inputs {
+  display: block;
+  margin: auto;
+  margin-bottom: 4%;
+  width: 280px;
+  height: 35px;
+  border-radius: 7px;
+  border: 2px solid #196C84;
+}
+.reg {
+  margin-top: 2rem;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.btn-crearCuenta {
+  background-color: #196C84;
+  padding: 10px 20px;
+  border-radius: 80px;
+  border: 2px solid rgba(25, 108, 132, 1);
+  font-weight: 700;
+  color: white;
+  font-size: .875rem;
+}
+.btn-Registrate {
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 80px;
+  border: 2px solid rgba(25, 108, 132, 1);
+  font-weight: 700;
+  color: rgba(25, 108, 132, 1);
+  font-size: .875rem;
+}
+.center_div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.center_div_row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.center_div i {
+  font-size: 2rem;
+  margin: 1rem;
+}
