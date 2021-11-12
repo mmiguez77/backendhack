@@ -10,7 +10,7 @@ async function getDataController(req, res) {
       res.json(answers);
     })
     .catch(function (err) {
-      throw err; // or handle it
+      throw err; 
     });
 }
 
@@ -32,7 +32,7 @@ async function getDataByIdController(req, res) {
     });
   } catch (error) {
     logger.error(error);
-    res.json("product not found");
+    res.json("product not found");//! 
   }
 }
 

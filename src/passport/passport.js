@@ -19,15 +19,15 @@ passport.deserializeUser((obj, cb) => {
   cb(null, obj)
 });
 
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
-});
+// passport.serializeUser(function(user, done) {
+//   done(null, user.id);
+// });
 
-passport.deserializeUser(function(id, done) {
-  UserModel.findById(id, function(err, user) {
-    done(err, user);
-  });
-});
+// passport.deserializeUser(function(id, done) {
+//   UserModel.findById(id, function(err, user) {
+//     done(err, user);
+//   });
+// });
 
 passport.use(
   "register",
@@ -38,27 +38,30 @@ passport.use(
       passReqToCallback: true,
     },
     async function (req, email, password, done) {
+  
+      try {
+        const { username, email, password, rol, surname } = req.body;
 
-        try {
-          const { nombre, email, password, emprendimiento, descripcion, consulta, rol } = req.body;
-            const userInDb = await UserModel.findOne({ email: email });
-          
-          if (userInDb) { 
-            return done(null, false, req.flash("error", "Usuario ya registrado"));
-          } else {
-            const newUser = new UserModel({ email, password, nombre, emprendimiento, descripcion, consulta, rol});
-  
-            if (req.file) { newUser.logo = req.file.path};
-  
-            newUser.password = await newUser.encryptPassword(password);
-            await newUser.save();
-  
-            const html = await templateNewUser(nombre);
-            await mailing("", email, "Nuevo Registro de Emprendedor", html);
-  
-            return done( null, newUser, req.flash("success", "Usuario registrado con éxito"));
-          }
-        } catch (error) {
+        if(!username, !email, !rol, !password, !surname){
+          return req.flash("error", "Faltan Datos para el registro")
+        }
+
+        const userInDb = await UserModel.findOne({ email: email });
+        
+        if (userInDb) { 
+          return done(null, false, req.flash("error", "Usuario ya registrado"));
+        } else {
+          const newUser = new UserModel({ email, surname, password, username, rol});
+
+          newUser.password = await newUser.encryptPassword(password);
+          await newUser.save();
+
+          const html = await templateNewUser(username);
+          await mailing("", email, "Nuevo Registro de Emprendedor", html);
+
+          return done( null, newUser, req.flash("success", "Usuario registrado con éxito"));
+        }
+      } catch (error) {
           req.flash("error", "Hubo un error, por favor contáctese con el administrador")
           logger.error.error(error.message);
         }      
@@ -72,9 +75,9 @@ passport.use(new FacebookStrategy({
   callbackURL: 'http://localhost:5000/user/auth/facebook/callback',
   profileFields: ['id', 'displayName', 'photos', 'emails'],
   scope: ['email']
-}, function (accessToken, refreshToken, userProfile, done) {
-  console.log(userProfile);//! BORRAR 
-  return done(null, userProfile);
+}, function (accessToken, refreshToken, user, done) {
+  console.log(user);//! BORRAR 
+  return done(null, user);
 }));
 
 passport.use(new GoogleStrategy({
@@ -84,6 +87,7 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, cb) {
     GoogleModel.findOrCreate({ googleId: profile.id, username: profile.displayName }, function (err, user) {
+      console.log(user);//! BORRAR
       return cb(err, user);
     });
   }

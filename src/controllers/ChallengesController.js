@@ -43,7 +43,13 @@ async function postDataController(req, res) {
       challenge: "required|maxLength:50",
       entrepreneurshipId: "required",
       cathegory: "required|string",
+      entrepreneurship: "required|string",
+      description: "required|string",
+      assistence: "required|string",
+      logo:"string"
     });
+
+    if (req.file) { data.logo = req.file.path};
 
     v.check().then((matched) => {
       if (!matched) {
