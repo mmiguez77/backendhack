@@ -34,7 +34,7 @@ class UserController {
   async passwordReset(req, res) {
     try {
       const email = req.body.email;
-      
+
       const user = await UserModel.findOne({ email: email });
       if (!user) return res.status(400).send({Error: "Hubo un error al intentar recuperar la contraseña"});
 
@@ -45,7 +45,8 @@ class UserController {
       };
 
       const url = `${config.BASE_URL}/password-reset/${user._id}/${token.token}`;
-      const body = templatePassReset(user.nombre, url);
+      const body = templatePassReset(user.username, url);
+
       await mailing("", user.email, "Solicitud de reseteo de password", body);
 
       res.status(200).send({Message: "Link para reseteo enviado al mail informado"});

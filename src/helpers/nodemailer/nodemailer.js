@@ -5,9 +5,12 @@ async function mailing(mailFrom, mailTo, subject, html) {
     let testAccount = await nodemailer.createTestAccount();
 
     let transporter = nodemailer.createTransport({
+        
+        // datos a definir según plataforma de envios de mail de make_sense
+        // y poder configurar otros servidores        
         host: "smtp.ethereal.email",
         port: 587,
-        secure: false, //! CAMBIAR A TRUE
+        secure: false, 
         auth: {
             user: config.MAIL_FROM,
             pass: config.MAIL_PASS 
@@ -19,7 +22,7 @@ async function mailing(mailFrom, mailTo, subject, html) {
 
     let info = await transporter.sendMail({
         from: await mailFrom || "no_reply@make_sense.com",
-        to: await mailTo || config.MAIL_TO,
+        to: await mailTo,
         subject: await subject,
         html: await html,
     });

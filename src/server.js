@@ -28,7 +28,7 @@ new CxnMongoDAO();
 app.use(cookieParser());
 app.use(
   session({
-    secret: "secreto",
+    secret: config.SECRET_KEY,
     rolling: true,
     resave: false,
     saveUninitialized: false,

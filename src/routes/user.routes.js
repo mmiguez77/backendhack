@@ -17,6 +17,8 @@ userRoutes.get('/auth/facebook/callback', passport.authenticate('facebook',{
   successRedirect: '/user/main',
   failureRedirect: '/user/login'
 }))
+userRoutes.post("/password-reset", user.passwordReset)
+userRoutes.post("/password-reset/:userId/:token", user.validateReset)
 
 userRoutes.get('/auth/google',
   passport.authenticate('google', { scope: ['profile'] }));
@@ -27,8 +29,6 @@ userRoutes.get('/auth/google/callback',
     res.redirect('/user/main');
   });
 
-userRoutes.post("/password-reset", user.passwordReset)
-userRoutes.post("/password-reset/:userId/:token", user.validateReset)
 
 userRoutes.post(
   "/register",
